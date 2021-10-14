@@ -1,2 +1,15 @@
-<h1 class="text-red-500">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Title from '../components/Title.svelte';
+	import CreateTodoForm from '../components/CreateTodoForm.svelte';
+	import TodoList from '../components/TodoList.svelte';
+</script>
+
+<svelte:head>
+	<title>Svelte Todo App</title>
+</svelte:head>
+
+<Title>Todo Svelte App</Title>
+<main class="max-w-xl mx-auto mt-12">
+	<CreateTodoForm />
+	<TodoList />
+</main>
