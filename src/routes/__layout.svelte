@@ -1,6 +1,12 @@
-<div>
+<script>
+	import Header from '../components/Header.svelte';
+	import Container from '../components/Container.svelte';
+</script>
+
+<Header />
+<Container>
 	<slot />
-</div>
+</Container>
 
 <style global>
 	@tailwind base;
