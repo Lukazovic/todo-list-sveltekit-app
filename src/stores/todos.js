@@ -1,9 +1,18 @@
 import { writable } from 'svelte/store';
 
+import TodosResources from '../services/resources/todo';
+
 export const todos = writable([]);
+
+export const fetchStoredTodos = () => {
+	const allTodos = TodosResources.getAllTodos();
+
+	todos.set(allTodos);
+};
 
 export const addNewTodo = ({ title }) => {
 	const dateTime = new Date().getTime();
+
 	const newTodo = {
 		id: dateTime.toString(),
 		title,
@@ -11,6 +20,7 @@ export const addNewTodo = ({ title }) => {
 		createdAt: dateTime,
 	};
 
+	TodosResources.saveNewTodo(newTodo);
 	todos.update((previousTodos) => [...previousTodos, newTodo]);
 };
 
@@ -24,6 +34,7 @@ export const toggleCompletedTodo = (id) => {
 			return currentTodo;
 		});
 
+		TodosResources.saveAllTodos(updatedTodos);
 		return updatedTodos;
 	});
 };
@@ -34,6 +45,7 @@ export const deleteTodoById = (id) => {
 			(currentTodo) => currentTodo.id !== id
 		);
 
+		TodosResources.saveAllTodos(updatedTodos);
 		return updatedTodos;
 	});
 };

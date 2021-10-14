@@ -1,7 +1,15 @@
 <script>
+	import { onMount } from 'svelte';
+
+	import { fetchStoredTodos } from '../stores/todos';
+
 	import Title from '../components/Title.svelte';
 	import CreateTodoForm from '../components/CreateTodoForm.svelte';
 	import TodoList from '../components/TodoList.svelte';
+
+	onMount(() => {
+		fetchStoredTodos();
+	});
 </script>
 
 <svelte:head>
