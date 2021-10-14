@@ -1,4 +1,6 @@
 <script>
+  import { addNewTodo } from '../stores/todos';
+
 	import TextField from './TextField.svelte';
 	import Button from './Button.svelte';
 
@@ -20,6 +22,7 @@
 			return;
 		}
 
+    addNewTodo(formData);
 		formData = { ...initialState };
 	};
 </script>

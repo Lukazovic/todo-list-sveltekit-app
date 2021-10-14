@@ -1,4 +1,6 @@
 <script>
+	import { toggleCompletedTodo, deleteTodoById } from '../stores/todos';
+
 	import ButtonIcon from './ButtonIcon.svelte';
 	import TrashIcon from '../icons/Trash.svelte';
 
@@ -7,11 +9,11 @@
 	export let id, title, completed, createdAt;
 
 	const handleCompletedChange = () => {
-		console.log('handleCompletedChange:',id);
+		toggleCompletedTodo(id);
 	};
 
 	const handleDelete = () => {
-    console.log('handleDelete:',id);
+		deleteTodoById(id);
 	};
 </script>
 
