@@ -1,38 +1,44 @@
-# create-svelte
+<h1 align="center">To-do list SvelteKit app</h1>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+https://user-images.githubusercontent.com/54550926/137606106-b3553c03-b66c-49a0-910d-e7dfd02548c2.mp4
 
-## Creating a project
+<p align="center">
+  <a href="https://todo-list-sveltekit.netlify.app/">Web Page</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-built-with">Built With</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#page_facing_up-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-use">How to Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#pencil-author">Author</a>
+</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## :wrench: Built With
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+- [Svelte](https://svelte.dev/)
+- [SvelteKit](https://kit.svelte.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+## :page_facing_up: About
 
-> Note: the `@next` is temporary
+This is a project I've made to learn Svelte and SvelteKit. This is a simple todo-list project that uses localStorage to save the tasks.
 
-## Developing
+## 💻 How to Use
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+#### Online
 
-```bash
-npm run dev
+You can use the App in this site: https://todo-list-sveltekit.netlify.app/
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+#### Locally
 
-## Building
+- Clone the project: `git clone https://github.com/Lukazovic/todo-list-sveltekit-app.git`;
+- Go to the project folder: `cd todo-list-sveltekit-app`;
+- Download the dependencies: `yarn`;
+- Start the application: `yarn dev -- --open`.
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+It will open a browser page (if it doesn't, go to [http://localhost:3000](http://localhost:3000/)).
 
-```bash
-npm run build
-```
+## :pencil: Author
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Lukazovic"><img src="https://avatars0.githubusercontent.com/u/54550926?s=460&u=cdeeac652ce0597a986fbdcff6e249ad27a1f1da&v=4" width="100px;" alt=""/><br /><sub><b>Lucas Vieira</b></sub></a><br /></td>
+  <tr>
+</table>
